@@ -9,10 +9,13 @@ import {
     ScrollView,
     Text,
     Image,
+    Dimensions
 } from "react-native";
 
 import Icon from 'react-native-vector-icons/Ionicons'
 import Category from '../screens/components/Explore/Category'
+
+const { width, height } = Dimensions.get('window')
 
 class Explore extends React.Component {
     componentWillMount(){
@@ -56,6 +59,20 @@ class Explore extends React.Component {
                                 </ScrollView>
                             </View>
                             {/* end of first horizontal scrollable component view container */}
+                            
+                            {/* second section */}
+                            <View style={{ marginTop: 40, paddingHorizontal: 20}}>
+                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
+                                    Introducing Airbnb Plus
+                                </Text>
+                                <Text style={{ fontWeight: '100', marginTop: 10 }}>
+                                    A new selection of homes verified for quality & comfort
+                                </Text>
+                                <View style={{ widht: width - 40, height: 200, marginTop: 20 }}>
+                                    <Image style={{flex: 1, height: null, width: null,resizeMode: 'cover', borderRadius: 5, borderWidth: 1,borderColor: '#dddddd' }} source={require('../assets/home.jpg')} />
+                                </View>
+                            </View> 
+                            {/* end of second section */}
                         </View>
                         {/* end of main view container */}
 
