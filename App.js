@@ -8,6 +8,8 @@ import Saved from './screens/Saved'
 import Trips from './screens/Trips'
 import Inbox from './screens/Inbox'
 
+import Icon from 'react-native-vector-icons/Ionicons'
+
 class App extends React.Component {
   render() {
     return (
@@ -20,7 +22,13 @@ class App extends React.Component {
 
 export default createBottomTabNavigator({
   Explore:{
-    screen: Explore
+    screen: Explore,
+    navigationOptions: {
+      tabBarLabel: 'EXPLORE',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ios-search" color={tintColor} size={24}/>
+      )
+    }
   },
   Saved:{
     screen: Saved
