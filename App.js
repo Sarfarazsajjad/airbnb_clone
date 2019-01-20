@@ -1,7 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class App extends React.Component {
+import {createBottomTabNavigator} from 'react-navigation';
+
+import Explore from './screens/Explore'
+import Saved from './screens/Saved'
+import Trips from './screens/Trips'
+import Inbox from './screens/Inbox'
+
+class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -10,6 +17,21 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default createBottomTabNavigator({
+  Explore:{
+    screen: Explore
+  },
+  Saved:{
+    screen: Saved
+  },
+  Trips:{
+    screen: Trips
+  },
+  Inbox:{
+    screen: Inbox
+  }
+})
 
 const styles = StyleSheet.create({
   container: {
