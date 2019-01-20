@@ -11,16 +11,6 @@ import Profile from './screens/Profile'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
-class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
-
 export default createBottomTabNavigator({
   Explore:{
     screen: Explore,
