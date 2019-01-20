@@ -42,7 +42,7 @@ export default createBottomTabNavigator({
   Inbox:{
     screen: Inbox,
     navigationOptions: {
-      tabBarLabel: 'EXPLORE',
+      tabBarLabel: 'INBOX',
       tabBarIcon: ({ tintColor }) => (
         <Icon name="ios-chatboxes" color={tintColor} size={24}/>
       )
