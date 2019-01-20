@@ -1,18 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-import {createBottomTabNavigator} from 'react-navigation';
-
+import { createBottomTabNavigator } from 'react-navigation'
+import Icon from 'react-native-vector-icons/Ionicons'
 import Explore from './screens/Explore'
 import Saved from './screens/Saved'
-import Trips from './screens/Trips'
 import Inbox from './screens/Inbox'
-import Profile from './screens/Profile'
+import Trips from './screens/Trips'
 
-import Icon from 'react-native-vector-icons/Ionicons'
 
 export default createBottomTabNavigator({
-  Explore:{
+  Explore: {
     screen: Explore,
     navigationOptions: {
       tabBarLabel: 'EXPLORE',
@@ -21,7 +19,7 @@ export default createBottomTabNavigator({
       )
     }
   },
-  Saved:{
+  Saved: {
     screen: Saved,
     navigationOptions: {
       tabBarLabel: 'SAVED',
@@ -30,16 +28,16 @@ export default createBottomTabNavigator({
       )
     }
   },
-  Trips:{
+  Trips: {
     screen: Trips,
     navigationOptions: {
       tabBarLabel: 'TRIPS',
       tabBarIcon: ({ tintColor }) => (
-        <Image source={require ('./assets/airbnb.png')} style={{ height: 24, width: 24, tintColor: tintColor}}/>
+        <Image source={require('./assets/airbnb.png')} style={{ height: 24, width: 24, tintColor: tintColor }} />
       )
     }
   },
-  Inbox:{
+  Inbox: {
     screen: Inbox,
     navigationOptions: {
       tabBarLabel: 'INBOX',
@@ -48,8 +46,8 @@ export default createBottomTabNavigator({
       )
     }
   },
-  Profile:{
-    screen: Profile,
+  Profile: {
+    screen: Inbox,
     navigationOptions: {
       tabBarLabel: 'PROFILE',
       tabBarIcon: ({ tintColor }) => (
@@ -57,21 +55,20 @@ export default createBottomTabNavigator({
       )
     }
   }
-},
-{
-  tabBarOptions:{
-    activeTintColor:'red',
-    inactiveTintColor:'grey',
-    style:{
-      backgroundColor: 'white',
-      borderTopWidth: 0,
-      shadowOffset: { width: 5, height: 3 },
-      shadowColor: 'black',
-      shadowOpacity: 0.5,
-      elevation: 5
+}, {
+    tabBarOptions: {
+      activeTintColor: 'red',
+      inactiveTintColor: 'grey',
+      style: {
+        backgroundColor: 'white',
+        borderTopWidth: 0,
+        shadowOffset: { width: 5, height: 3 },
+        shadowColor: 'black',
+        shadowOpacity: 0.5,
+        elevation: 5
+      }
     }
-  }
-})
+  })
 
 const styles = StyleSheet.create({
   container: {
