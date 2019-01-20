@@ -7,6 +7,7 @@ import Explore from './screens/Explore'
 import Saved from './screens/Saved'
 import Trips from './screens/Trips'
 import Inbox from './screens/Inbox'
+import Profile from './screens/Profile'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -54,6 +55,15 @@ export default createBottomTabNavigator({
       tabBarLabel: 'EXPLORE',
       tabBarIcon: ({ tintColor }) => (
         <Icon name="ios-chatboxes" color={tintColor} size={24}/>
+      )
+    }
+  },
+  Profile:{
+    screen: Profile,
+    navigationOptions: {
+      tabBarLabel: 'PROFILE',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ios-person" color={tintColor} size={24}/>
       )
     }
   }
